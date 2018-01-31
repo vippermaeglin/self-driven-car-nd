@@ -1,4 +1,4 @@
-<img src="images/cover.png" alt="Self-Driving Car" width="800px">
+<img src="https://s3-us-west-1.amazonaws.com/udacity-content/images/shared/self-driving-car-engineer-nanodegree.png" alt="Self-Driving Car" width="800px">
 
 # Udacity - Self Driven Car Engineer #
 * [https://udacity.com](https://udacity.com/course/self-driving-car-engineer-nanodegree--nd013)
@@ -12,7 +12,8 @@ In this project you will detect lane lines in images using Python and OpenCV. Op
 
 
 ### Partners ###
-https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-uber.svg
+<img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-uber.svg" alt="Uber">
+
 https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-didi.svg
 https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-mercedes-benz.svg
 https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-mclaren.svg
