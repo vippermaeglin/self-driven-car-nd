@@ -12,8 +12,7 @@ In this project you will detect lane lines in images using Python and OpenCV. Op
 
 
 ### Partners ###
-<img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-uber.svg" alt="Uber">
-<img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-didi.svg" alt="Didi">
+<img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-uber.svg" alt="Uber"><img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-didi.svg" alt="Didi">
 <img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-mercedes-benz.svg" alt="Mercedes Benz">
 <img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-mclaren.svg" alt="McLaren">
 <img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-bmw.svg" alt="BMW">
