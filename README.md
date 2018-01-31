@@ -7,7 +7,7 @@ Self-driving cars are set to revolutionize the way we live. This is transformati
 
 ### Projects ###
 
-* Finding Lane Lines on the Road:
+* <a href="https://github.com/vippermaeglin/self-driven-car-nd"> Finding Lane Lines on the Road</a>:
 In this project you will detect lane lines in images using Python and OpenCV. OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.
 
 
