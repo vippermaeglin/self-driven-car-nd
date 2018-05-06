@@ -9,7 +9,11 @@ Self-driving cars are set to revolutionize the way we live. This is transformati
 
 * <a href="https://github.com/vippermaeglin/self-driven-car-nd/tree/master/P1%20-%20Lane%20Lines"> Finding Lane Lines on the Road</a>:
 In this project I detect lane lines in images using Python and OpenCV. OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.
-<img src="P1 - Lane Lines/examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" align="middle"/>
+<img src="P1 - Lane Lines/examples/laneLines_thirdPass.jpg" width="480" alt="Example Image" align="middle"/>
+
+* <a href="https://github.com/vippermaeglin/self-driven-car-nd/tree/master/P2%20-%20Traffic%20Sign%20Classifier"> Traffic Sign Classifier</a>:
+In this project, I use what I've learned about deep neural networks and convolutional neural networks to classify traffic signs. Specifically, I trained a model to classify traffic signs from the German Traffic Sign Dataset.
+<img src="P2 - Traffic Sign Classifier/random_example.png" width="480" alt="Example Image" align="middle"/>
 
 
 ### Partners ###
