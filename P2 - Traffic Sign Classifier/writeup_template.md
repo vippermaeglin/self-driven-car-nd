@@ -112,9 +112,9 @@ Notebook In[8]: The accuracy was calculated using the "evaluate" function and th
 ![alt text][image12]
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 100%
+* validation set accuracy of 97.8% 
+* test set accuracy of 94.2%
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?  
