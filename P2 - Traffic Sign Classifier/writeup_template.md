@@ -28,7 +28,7 @@ The goals / steps of this project are the following:
 [image7]: ./examples/image7.png "Traffic Sign 3"
 [image8]: ./examples/image8.png "Traffic Sign 4"
 [image9]: ./examples/image9.png "Traffic Sign 5"
-[image9]: ./examples/image10.png "Traffic Sign 6"
+[image10]: ./examples/image10.png "Traffic Sign 6"
 [image11]: ./examples/image11.png "Predictions"
 [image12]: ./examples/image12.png "Accuracy"
 
