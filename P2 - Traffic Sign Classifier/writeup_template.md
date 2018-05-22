@@ -112,9 +112,9 @@ Notebook In[8]: The accuracy was calculated using the "evaluate" function and th
 ![alt text][image12]
 
 My final model results were:
-* training set accuracy of 100%
-* validation set accuracy of 97.8% 
-* test set accuracy of 94.2%
+* training set accuracy of 99.9%
+* validation set accuracy of 99.5% 
+* test set accuracy of 94.8%
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?  
@@ -130,14 +130,14 @@ The convolutional and dropout layers was basically my architectural modification
 
 ### Test a Model on New Images
 
-#### 1. Choose five or more German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Notebook In[9]: Here are six German traffic signs that I found on the web:
+Notebook In[9]: Here are five German traffic signs that I found on the web:
 
-![alt text][image5] ![alt text][image6] ![alt text][image7] 
-![alt text][image8] ![alt text][image9] ![alt text][image10]
+![alt text][image6] ![alt text][image7] ![alt text][image8]
+![alt text][image9] ![alt text][image10]
 
-The fourth image might be difficult to classify because an empty sign would be interpreted as an unfocused image (poor quality).
+The third image might be difficult to classify because an empty sign would be interpreted as an unfocused image (poor quality).
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -146,9 +146,9 @@ Notebook In[10,11,12]: Here are the results of the prediction:
 ![alt text][image11] 
 
 
-The model was able to correctly guess 6 of the 6 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set although I did throw it a softball.
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test/validation sets.
 
-#### 3. Describe how certain the model is when predicting on each of the six new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 Notebook In[10,11,12]:The probabilities for each prediction is available in the above image.
 
