@@ -117,15 +117,15 @@ My final model results were:
 * test set accuracy of ?
 
 If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
+* What was the first architecture that was tried and why was it chosen?  
 I started with the original LeNet code from lessons exercises with default parameters but both accuracy was below 93%.
-* What were some problems with the initial architecture?
+* What were some problems with the initial architecture?  
 The main issues was the poor normalization and wrong parameters (underfitting).
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
+* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.  
 After increasing the data set on normalization and changing hyperparameters I still couldn't reach 93% very easily, so I added another convolution and dropouts with a 50% probability to achieve a satisfactory result.
-* Which parameters were tuned? How were they adjusted and why?
+* Which parameters were tuned? How were they adjusted and why?  
 Epoch, learning rate, batch size, and drop out probability were all parameters tuned along with the number of random modifications to generate more image data was tuned. For Epoch the main reason I tuned this was after I started to get better accuracy early on I lowered the number once I had confidence I could reach my accuracy goals. The batch size I increased only slightly since starting once I increased the dataset size. The learning rate I think could of been left at .001 which is as I am told a normal starting point, but I just wanted to try something different so .00097 was used. I think it mattered little. The dropout probability mattered a lot early on, but after awhile I set it to 50% and just left it. The biggest thing that effected my accuracy was the data images generated with random modifications. 
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?  
 The convolutional and dropout layers was basically my architectural modifications after reading several papers and articles at Medium. Dropout was amazing to drastically improve generalization of my model and preventing overfitting.
 
 ### Test a Model on New Images
