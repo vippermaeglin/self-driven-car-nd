@@ -37,16 +37,20 @@ with open('mydata/driving_log.csv') as csvfile:
         samples.append(line)
 
 del(samples[0])
+print("samples: ", len(samples))
 
 #Splitting images to training and validation samples
 
 train_samples, validation_samples = train_test_split(samples, test_size=0.2)
+print("train_samples: ", len(train_samples))
+print("validation_samples: ", len(validation_samples))
 
 correction_factor = 0.25
 
 def generator(samples, batch_size=258):
     """Randomly selects sample images and modify images before passing it"""
     num_samples = len(samples)
+    print("num_samples: ", num_samples)
     while 1: 
         shuffle(samples)
         for offset in range(0, num_samples, batch_size):
@@ -56,7 +60,8 @@ def generator(samples, batch_size=258):
             measurements = []
             
             for batch_sample in batch_samples:
-                
+                #Randomly picks images from left, center or right cameras                 
+                camera = random.choice([0,0,0,1,2])
                 image_source = batch_sample[camera]
                 file_name = ntpath.basename(image_source)
                 image_path = 'mydata/IMG/'+ file_name
@@ -64,9 +69,7 @@ def generator(samples, batch_size=258):
                 image = cv2.imread(image_path)
                 image = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
                 
-                #Randomly picks images from left, center or right cameras 
-                
-                camera = random.choice([0,0,0,1,2])
+               
                 
                 if camera == 0:
                     measurement = float(batch_sample[3])
@@ -91,7 +94,9 @@ def generator(samples, batch_size=258):
                 measurements.append(measurement)
                     
             X_train = np.array(images)
+            print("X_train: ", len(X_train))
             y_train = np.array(measurements)
+            print("y_train: ", len(y_train))
             
             yield sklearn.utils.shuffle(X_train, y_train)
 
