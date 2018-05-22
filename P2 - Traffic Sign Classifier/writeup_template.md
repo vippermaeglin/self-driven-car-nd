@@ -28,9 +28,9 @@ The goals / steps of this project are the following:
 [image7]: ./examples/image7.png "Traffic Sign 3"
 [image8]: ./examples/image8.png "Traffic Sign 4"
 [image9]: ./examples/image9.png "Traffic Sign 5"
-[image9]: ./examples/image10.png "Traffic Sign 6"
+[image10]: ./examples/image10.png "Traffic Sign 6"
 [image11]: ./examples/image11.png "Predictions"
-[image12]: ./examples/image11.png "Accuracy"
+[image12]: ./examples/image12.png "Accuracy"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
