@@ -13,7 +13,7 @@ In this project I detect lane lines in images using Python and OpenCV. OpenCV me
 
 * <a href="https://github.com/vippermaeglin/self-driven-car-nd/tree/master/P2%20-%20Traffic%20Sign%20Classifier"> Traffic Sign Classifier</a>:
 In this project, I use what I've learned about deep neural networks and convolutional neural networks to classify traffic signs. Specifically, I trained a model to classify traffic signs from the German Traffic Sign Dataset.
-<img src="P2 - Traffic Sign Classifier/random_example.png" width="480" alt="Example Image" align="middle"/>
+<img src="P2 - Traffic Sign Classifier/examples/image13.png" width="480" alt="Example Image" align="middle"/>
 
 
 ### Partners ###

@@ -1,7 +1,7 @@
 ## Project: Build a Traffic Sign Recognition Program
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-<img src="examples/image13.jpg" width="480" alt="Example" />
+<img src="examples/image13.png" width="480" alt="Example" />
 
 Overview
 ---
