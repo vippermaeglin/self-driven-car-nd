@@ -30,6 +30,7 @@ The goals / steps of this project are the following:
 [image9]: ./examples/image9.png "Traffic Sign 5"
 [image9]: ./examples/image10.png "Traffic Sign 6"
 [image11]: ./examples/image11.png "Predictions"
+[image12]: ./examples/image11.png "Accuracy"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -65,10 +66,10 @@ Notebook In[4]: Then I plotted the occurrence of each image class to show how th
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-Notebook In[5]: As a first step, I decided to convert the images to grayscale because I read a few papers with great results using this technique and I don't really think colors are relevant to traffic signs (most of them are mono symbols).
-Notebook In[6]: To add more data to the the data set, I created additional images for training through randomized modifications like small rotations or opencv affine.
-As a last step, I normalized the gray pixel values to 128 to improve the speed of training.
-
+Notebook In[5]: As a first step, I decided to convert the images to grayscale because I read a few papers with great results using this technique and I don't really think colors are relevant to traffic signs (most of them are mono symbols).  
+Notebook In[6]: To add more data to the the data set, I created additional images for training through randomized modifications like small rotations or opencv affine.  
+As a last step, I normalized the gray pixel values to 128 to improve the speed of training.  
+  
 Here is an example of a new image inserted and the original grayscale image used to create it(on the right):
 
 ![alt text][image3] 
@@ -108,6 +109,8 @@ Notebook In[8]: To train the model, I used an LeNet for the most part that was g
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 Notebook In[8]: The accuracy was calculated using the "evaluate" function and then plotted a chart with all epochs:
+![alt text][image12]
+
 My final model results were:
 * training set accuracy of ?
 * validation set accuracy of ? 
