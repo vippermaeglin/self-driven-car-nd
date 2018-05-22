@@ -44,7 +44,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-Notebook In[1]: I loaded the data using pickle. 
+Notebook In[1]: I loaded the data using pickle.  
 Notebook In[2]: I used the numpy library to calculate summary statistics of the traffic signs data set:
 
 * The size of training set is 34799
