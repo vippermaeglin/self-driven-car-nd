@@ -1,17 +1,20 @@
-# Imports relevant modules
 import csv
 import cv2
 import numpy as np
 import ntpath
 import sklearn
 import random
+import matplotlib.image as mpimg
 from sklearn.model_selection import StratifiedShuffleSplit, train_test_split
 from sklearn.utils import shuffle
-import matplotlib.image as mpimg
+from keras.models import Sequential
+from keras.layers import Flatten, Dense, Lambda, Cropping2D, Activation, Dropout, MaxPooling2D, Reshape
+from keras.layers.convolutional import Convolution2D
+from keras.regularizers import l2, activity_l2
+from keras.optimizers import Adam
 
-#Function to brighten images
+#Brighten image algorithm to improve HSV
 def brighten_image(image):
-    """Randomly brighten images for better data processing"""
     brighten_image = cv2.cvtColor(image,cv2.COLOR_RGB2HSV)
     random_bright = .25 + np.random.uniform()
     brighten_image[:,:,2] = brighten_image[:,:,2] * random_bright
@@ -19,17 +22,15 @@ def brighten_image(image):
     
     return brighten_image
 
-#Function to flip images
+#Flip algorithm to generate inverted images 
 def flip_image(image,measurement):
-    """Flip images and their corresponding measurements"""
     flipped = np.fliplr(image)
     measurement = - measurement
     
     return flipped, measurement
 
 
-#Loading data
-
+#First, load the data
 samples = []
 with open('mydata/driving_log.csv') as csvfile:
     reader = csv.reader(csvfile)
@@ -39,16 +40,14 @@ with open('mydata/driving_log.csv') as csvfile:
 del(samples[0])
 print("samples: ", len(samples))
 
-#Splitting images to training and validation samples
-
+#Then split images into train and validation samples (80/20)
 train_samples, validation_samples = train_test_split(samples, test_size=0.2)
 print("train_samples: ", len(train_samples))
 print("validation_samples: ", len(validation_samples))
 
+#Use a correction factor to compensate right/left cameras offset
 correction_factor = 0.25
-
 def generator(samples, batch_size=258):
-    """Randomly selects sample images and modify images before passing it"""
     num_samples = len(samples)
     print("num_samples: ", num_samples)
     while 1: 
@@ -67,8 +66,7 @@ def generator(samples, batch_size=258):
                 image_path = 'mydata/IMG/'+ file_name
                 
                 image = cv2.imread(image_path)
-                image = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
-                
+                image = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)               
                
                 
                 if camera == 0:
@@ -80,7 +78,7 @@ def generator(samples, batch_size=258):
                 if camera == 2: 
                     measurement = float(batch_sample[3]) - correction_factor
                     
-                #Randomly augment images through brightening or flipping
+                #Randomly augment images through brightening (prefered) or flipping
                 augmentation = random.choice(['brighten','brighten','flip'])
 
                 if augmentation  == 'brighten':
@@ -100,54 +98,55 @@ def generator(samples, batch_size=258):
             
             yield sklearn.utils.shuffle(X_train, y_train)
 
-#Importing keras modules
-from keras.models import Sequential
-from keras.layers import Flatten, Dense, Lambda, Cropping2D, Activation, Dropout, MaxPooling2D, Reshape
-from keras.layers.convolutional import Convolution2D
-from keras.regularizers import l2, activity_l2
-from keras.optimizers import Adam
-
-#Model Architecture
-#Input Layer
+#My Model Architecture
+#Input Layer - Preprocessing data
 model = Sequential()
 model.add(Lambda(lambda x:(x/127.5)-1., input_shape=(160,320,3)))
-model.add(Cropping2D(cropping=((65,25),(0,0))))
+model.add(Cropping2D(cropping=((75,25),(0,0))))
 
-#Layer 1
+#Layer 1 - 5x5 Convolution layer plus RELU activation
 model.add(Convolution2D(24,5,5,subsample=(2,2),activation='relu'))
 
-#Layer 2
+#Layer 2 - 5x5 Convolution layer plus RELU activation
 model.add(Convolution2D(36,5,5,subsample=(2,2),activation='relu'))
 
-#Layer 3
+#Layer 3 - 5x5 Convolution layer plus ELU activation
 model.add(Convolution2D(48,5,5,subsample=(2,2),activation='elu'))
+
+#Layer 4 - 2x2 Max pooling layer
 model.add(MaxPooling2D([2,2]))
 
-#Layer 4
+#Layer 5 - Flatten layer
 model.add(Flatten())
+
+#Layer 6 - Fully connected layer plus ELU activation
 model.add(Dense(100))
 model.add(Activation('elu'))
+
+#Layer 7 - Dropout layer
 model.add(Dropout(0.5))
 
-#Layer 5
+#Layer 8 - Fully connected layer
 model.add(Dense(50))
 model.add(Activation('elu'))
 
-#Layer 6
+#Layer 9 - Fully connected layer
 model.add(Dense(10))
 model.add(Activation('elu'))
 
-#Layer Output
+#Output Layer
 model.add(Dense(1))
           
 #Training and validation
 train_generator = generator(train_samples, batch_size=500)
 validation_generator = generator(validation_samples, batch_size=500)
-          
+
+#Aply Adam optimizer          
 model.compile(loss='mse',optimizer=Adam(0.001))
 model.fit_generator(train_generator, samples_per_epoch=10000, validation_data=validation_generator, 
             nb_val_samples=len(validation_samples), nb_epoch=5)
 
+#Save model
 model.save('model.h5')
 
 
