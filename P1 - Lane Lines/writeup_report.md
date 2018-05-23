@@ -1,5 +1,9 @@
 # **Finding Lane Lines on the Road** 
 
+## Writeup
+
+### by Vinícius Arruda
+
 ---
 
 **Finding Lane Lines on the Road**
