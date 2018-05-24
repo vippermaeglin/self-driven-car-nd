@@ -98,7 +98,7 @@ Here's my final architecture:
 
 #### 3. Creation of the Training Set & Training Process
 
-The training set consists of images from three cameras on the front of the car (left|center|right) and (the video is splitted into several images for each frame).
+The training set consists of images from three cameras on the front of the car left | center | right (the video is splitted into several images for each time frame).
 
 ![alt text][image2]
 
