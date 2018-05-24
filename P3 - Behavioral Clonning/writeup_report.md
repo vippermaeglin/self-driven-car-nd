@@ -60,7 +60,7 @@ The model includes RELU layers to introduce nonlinearity and a few ELU layers fo
 
 #### 2. Attempts to reduce overfitting in the model
 
-The model contains dropout layers in order to reduce overfitting (model.py lines 127). 
+The model contains a dropout layer in order to reduce overfitting (model.py lines 127). 
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting, and apllied Adam optimization at the end (code line 141-147). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
@@ -70,14 +70,19 @@ The model used an Adam Optimizer, so the learning rate was not tuned manually (m
 
 #### 4. Appropriate training data
 
-The training data was genrated by me using the mouse as controller on the first track of Udacity Simulator. Afte I used a random combination of center/left/right cameras on my model to train it in different lanes perspectives. 
-
-For details about how I created the training data, see the next section. 
+Besides I tried to use the simulator with different drive behaviors to generate enough data (slowing down on curves, keeping the car centered for one entire lap, approaching the lines and going back etc), it was took too much time with unsatisfactory results. In the end I just used the data provided by Udacity for training. The Udacity’s driving images consists of
+images from three cameras attached on the left, right and center of the car. Other file include the
+steering angle, the throttle and the speed of the car
 
 ### Model Architecture and Training Strategy
 
-My architecture was based on the neural network used by NVIDIA with a few modifications.  
+#### 1. Solution Design Approach
+
+My solution was based on the neural network used by NVIDIA with a few modifications.  
 At first, I used the NVIDIA neural network with all 5 CNN layers, but it doesn't work well. As suggested by Udacity, I added a lambda layer to normalize data, Adam Optimizer to improve the weight updates and preprocessed the data before training. I also simplified the network to reduce my tests duration by removing 2 CNN layers and decreasing convolutions depths.  
+
+#### 2. Final Model Architecture
+
 Here's my final architecture:
 
 | Layer         		|     Description	        			                                  		|
@@ -93,3 +98,8 @@ Here's my final architecture:
 | FULLY CONNECTED 2 | Input  50 and ELU activiation                                       |
 | FULLY CONNECTED 3 | Input  10 and ELU activiation                                       |
 | OUTPUT            | Output with trained weighted and biases                             |
+
+#### 3. Creation of the Training Set & Training Process
+
+At the beginning I tried to train the original Udacity data set and it was heavily skewed towards the car driving straight, not turning the car enough when it was supposed to. To properly balance this data a generator was used to randomly choose images from one of the three cameras with a bigger probability favoring the center camera (also on side cameras was applied a small correction factor to the steering angles compensating the offset from the center). By using images from all three cameras, the bias to drive straight was reduced while also teaching the car to move towards the center of the road if it drifted off towards the sides. A function to randomly change the brightness of the images or flip them was also included to allow the car to learn to drive in different conditions.  
+My conclusion for this project was that the most important factor was the balanced training data. An unbalanced data easily affect the driving behavior of the car with a model too biased. Another lesson learn was that increasing the number of training epochs without dropout could cause the model to overfit the data. Finally, I noticed that increasing the number of layers does not necessarily improve the training performance for simple cases, actually it's better to prevent any assumption about this kind of correlation. 
