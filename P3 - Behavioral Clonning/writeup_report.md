@@ -18,13 +18,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image1]: ./examples/image01.png "Example"
+[image2]: ./examples/image02.png "Example"
+[image3]: ./examples/image03.png "Example"
+[image4]: ./examples/image04.png "Example"
+[image5]: ./examples/image05.png "Example"
+[image6]: ./examples/image06.png "Example"
+[image7]: ./examples/image07.png "Example"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -101,5 +101,18 @@ Here's my final architecture:
 
 #### 3. Creation of the Training Set & Training Process
 
-At the beginning I tried to train the original Udacity data set and it was heavily skewed towards the car driving straight, not turning the car enough when it was supposed to. To properly balance this data a generator was used to randomly choose images from one of the three cameras with a bigger probability favoring the center camera (also on side cameras was applied a small correction factor to the steering angles compensating the offset from the center). By using images from all three cameras, the bias to drive straight was reduced while also teaching the car to move towards the center of the road if it drifted off towards the sides. A function to randomly change the brightness of the images or flip them was also included to allow the car to learn to drive in different conditions.  
+The training set consists of images from three cameras on the front of the car (left|center|right) and (the video is splitted into several images for each frame).
+
+![alt text][image02]
+
+The simulator also generate a CSV file with steering, throtle, brake and speed values at each moment: 
+
+![alt text][image03]
+
+At the beginning I tried to train the original Udacity data set and it was heavily skewed towards the car driving straight, not turning the car enough when it was supposed to. To properly balance this data a generator was used to randomly choose images from one of the three cameras with a bigger probability favoring the center camera (also on side cameras was applied a small correction factor to the steering angles compensating the offset from the center). By using images from all three cameras, the bias to drive straight was reduced while also teaching the car to move towards the center of the road if it drifted off towards the sides. A function to randomly change the brightness of the images or flip them was also included to allow the car to learn to drive in different conditions. Another important step was the cropping of irrelevant portions of images that were confusing the model:
+
+![alt text][image4]
+ 
 My conclusion for this project was that the most important factor was the balanced training data. An unbalanced data easily affect the driving behavior of the car with a model too biased. Another lesson learn was that increasing the number of training epochs without dropout could cause the model to overfit the data. Finally, I noticed that increasing the number of layers does not necessarily improve the training performance for simple cases, actually it's better to prevent any assumption about this kind of correlation. 
+
+
