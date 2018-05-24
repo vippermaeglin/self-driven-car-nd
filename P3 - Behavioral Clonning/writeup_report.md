@@ -77,4 +77,19 @@ For details about how I created the training data, see the next section.
 ### Model Architecture and Training Strategy
 
 My architecture was based on the neural network used by NVIDIA with a few modifications.  
-At first, I used the NVidia neural network with all 5 CNN layers, but it doesn't work well. As suggested by Udacity, I added a lambda layer to normalize data, Adam Optimizer to improve the weight updates and preprocessed the data before training. I also simplified the network to reduce my tests duration bt removing 2 CNN layers and decreasing convolutions depths.
+At first, I used the NVIDIA neural network with all 5 CNN layers, but it doesn't work well. As suggested by Udacity, I added a lambda layer to normalize data, Adam Optimizer to improve the weight updates and preprocessed the data before training. I also simplified the network to reduce my tests duration by removing 2 CNN layers and decreasing convolutions depths.  
+Here's my final architecture:
+
+| Layer         		|     Description	        			                                  		|
+|:-----------------:|:-------------------------------------------------------------------:|
+| INPUT         		| Lambda layer with cropping                                          |
+| CNN 1             | 5x5 filter, stride of 2, 24 outputs (depth) and RELU activation     |
+| CNN2              | 5x5 filter, stride of 2, 36 outputs (depth) and RELU activation     |
+| CNN3              | 5x5 filter, stride of 2, 48 outputs (depth) and ELU activation      |
+| MAX POOLING       | 2x2 filter                                                          |
+| FLATTEN           | Flatten layer                                                       |
+| FULLY CONNECTED 1 | Input 100 and ELU activiation                                       |
+| DROPOUT           | 50% rate                                                            |
+| FULLY CONNECTED 2 | Input  50 and ELU activiation                                       |
+| FULLY CONNECTED 3 | Input  10 and ELU activiation                                       |
+| OUTPUT            | Output with trained weighted and biases                             |
