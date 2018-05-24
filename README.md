@@ -17,7 +17,7 @@ In this project, I use what I've learned about deep neural networks and convolut
 
 * <a href="https://github.com/vippermaeglin/self-driven-car-nd/tree/master/P3%20-%20Behavioral%20Clonning"> Behavioral Clonning</a>:
 In this project, I use the Udacity Simulator to generate a car driving data and train a Convolutional Neural Network model to clone my driving behavior.
-<img src="P3 - Behavioral Clonning/examples/image1.png" width="480" alt="Example Image" align="middle"/>
+<img src="P3 - Behavioral Clonning/examples/image01.png" width="480" alt="Example Image" align="middle"/>
 
 
 
