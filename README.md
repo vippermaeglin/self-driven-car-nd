@@ -15,6 +15,11 @@ In this project I detect lane lines in images using Python and OpenCV. OpenCV me
 In this project, I use what I've learned about deep neural networks and convolutional neural networks to classify traffic signs. Specifically, I trained a model to classify traffic signs from the German Traffic Sign Dataset.
 <img src="P2 - Traffic Sign Classifier/examples/image13.png" width="480" alt="Example Image" align="middle"/>
 
+* <a href="https://github.com/vippermaeglin/self-driven-car-nd/tree/master/P3%20-%20Behavioral%20Clonning"> Behavioral Clonning</a>:
+In this project, I use the Udacity Simulator to generate a car driving data and train a Convolutional Neural Network model to clone my driving behavior.
+<img src="P3 - Behavioral Clonning/examples/image1.png" width="480" alt="Example Image" align="middle"/>
+
+
 
 ### Partners ###
 <img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-uber.svg" alt="Uber"> <img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-didi.svg" alt="Didi"> <img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-mercedes-benz.svg" alt="Mercedes Benz"> 
