@@ -144,7 +144,7 @@ validation_generator = generator(validation_samples, batch_size=500)
 #Aply Adam optimizer          
 model.compile(loss='mse',optimizer=Adam(0.001))
 model.fit_generator(train_generator, samples_per_epoch=10000, validation_data=validation_generator, 
-            nb_val_samples=len(validation_samples), nb_epoch=5)
+            nb_val_samples=len(validation_samples), nb_epoch=20)
 
 #Save model
 model.save('model.h5')
