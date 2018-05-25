@@ -19,9 +19,11 @@ In this project, I use what I've learned about deep neural networks and convolut
 In this project, I use the Udacity Simulator to generate a car driving data and train a Convolutional Neural Network model to clone my driving behavior.
 <img src="P3 - Behavioral Clonning/examples/image01.png" width="480" alt="Example Image" align="middle"/>
 
+<!---
 * <a href="https://github.com/vippermaeglin/self-driven-car-nd/tree/master/P4%20-%20Advanced%20Lane%20Finding"> Advanced Lane Finding</a>:
 In this project, I wrote a software pipeline to identify the lane boundaries in a video from a front-facing camera on a car. The camera calibration images, test road images, and project videos are available in the project repository.
 <img src="P4 - Advanced Lane Finding/examples/image01.png" width="480" alt="Example Image" align="middle"/>
+--->
 
 ### Partners ###
 <img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-uber.svg" alt="Uber"> <img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-didi.svg" alt="Didi"> <img src="https://br.udacity.com/assets/iridium/images/shared/partners/logo-color-mercedes-benz.svg" alt="Mercedes Benz"> 
