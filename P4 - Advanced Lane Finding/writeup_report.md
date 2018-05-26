@@ -99,7 +99,7 @@ Notebook In[19]: I defined the `get_curvatures(binary_warped, left_fit, right_fi
 
 Notebook In[20]: Here is an example of my result on a test image:
 
-![alt text][image01]
+![alt text][image1]
 
 ---
 
