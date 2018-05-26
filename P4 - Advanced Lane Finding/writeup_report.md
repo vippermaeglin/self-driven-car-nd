@@ -22,14 +22,14 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/image01.png "Example"
-[image2]: ./examples/image02.jpg "Camera Calibration"
-[image3]: ./examples/image03.jpg "Undistorted Image"
-[image4]: ./examples/image04.jpg "Thresholds"
-[image5]: ./examples/image05.jpg "LS Channels"
-[image6]: ./examples/image06.jpg "Final Threshold"
-[image6]: ./examples/image07.jpg "Bird's Eye"
-[image6]: ./examples/image08.jpg "Histogram"
-[image6]: ./examples/image09.jpg "Detected Lines"
+[image2]: ./examples/image02.png "Camera Calibration"
+[image3]: ./examples/image03.png "Undistorted Image"
+[image4]: ./examples/image04.png "Thresholds"
+[image5]: ./examples/image05.png "LS Channels"
+[image6]: ./examples/image06.png "Final Threshold"
+[image7]: ./examples/image07.png "Bird's Eye"
+[image8]: ./examples/image08.png "Histogram"
+[image9]: ./examples/image09.png "Detected Lines"
 [video1]: ./video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
