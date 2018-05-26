@@ -115,4 +115,4 @@ Here's a [link to my video result](./video.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-TODO:
+Once again the hardest part of this project was to test the right parameters and filters that would find the lane lines for the most out of the images. Another challenge was hiding irrelevant objects from the image that could make line detection very hard, such as trees and shades. Overall my code works well with the project video but I'm aware that these fixed thresholds values used for the different filters cannot possibly work successfully in every situation. To make it more robust these parameters could be dynamically adjusted according with the current scenario and I also would improve the "handling bad frames" approach, since it's hard to recover for a long sequence like 30 frames or more. 
