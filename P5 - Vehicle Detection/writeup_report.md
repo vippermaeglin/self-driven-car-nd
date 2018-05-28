@@ -1,3 +1,10 @@
+# **Vehicle Detection & Tracking** 
+
+## Writeup
+
+### by Vinícius Arruda
+
+---
 **Vehicle Detection Project**
 
 The goals / steps of this project are the following:
@@ -64,7 +71,7 @@ I also tried different color spaces, but YCrCb provided the best result. Increas
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-Notebook In[]: First I fed the LinearSVC model with the extracted features using default settings, the trained model had accuracy of 99.35% on test data. Then the trained model and parameters used for training were saved to pickle files to be further used by vehicle detection pipeline.
+Notebook In[5]: First I fed the LinearSVC model with the extracted features using default settings, the trained model had accuracy of 99.35% on test data. Then the trained model and parameters used for training were saved to pickle files to be further used by vehicle detection pipeline.
 
 ### Sliding Window Search
 
@@ -72,7 +79,7 @@ Notebook In[]: First I fed the LinearSVC model with the extracted features using
 
 Notebook In[3]: I decided to use a multi-scale window approach for a higher coverage of potential detections. It's also prevents calculation of feature vectors for the entire image and thus helps in speeding.
 
-| Scale 1       | Scale 2       | Scale 3       |
+| Window 1      | Window 2      | Window 3      |
 |:-------------:|:-------------:|:-------------:|
 | ystart = 380  | ystart = 400  | ystart = 500  |
 | ystop = 480   | ystop = 600   | ystop = 700   |
