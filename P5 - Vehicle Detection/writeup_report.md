@@ -1,3 +1,10 @@
+# **Vehicle Detection & Tracking** 
+
+## Writeup
+
+### by Vinícius Arruda
+
+---
 **Vehicle Detection Project**
 
 The goals / steps of this project are the following:
