@@ -64,7 +64,7 @@ I also tried different color spaces, but YCrCb provided the best result. Increas
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-Notebook In[]: First I fed the LinearSVC model with the extracted features using default settings, the trained model had accuracy of 99.35% on test data. Then the trained model and parameters used for training were saved to pickle files to be further used by vehicle detection pipeline.
+Notebook In[5]: First I fed the LinearSVC model with the extracted features using default settings, the trained model had accuracy of 99.35% on test data. Then the trained model and parameters used for training were saved to pickle files to be further used by vehicle detection pipeline.
 
 ### Sliding Window Search
 
