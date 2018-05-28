@@ -79,7 +79,7 @@ Notebook In[5]: First I fed the LinearSVC model with the extracted features usin
 
 Notebook In[3]: I decided to use a multi-scale window approach for a higher coverage of potential detections. It's also prevents calculation of feature vectors for the entire image and thus helps in speeding.
 
-| Scale 1       | Scale 2       | Scale 3       |
+| Window 1      | Window 2      | Window 3      |
 |:-------------:|:-------------:|:-------------:|
 | ystart = 380  | ystart = 400  | ystart = 500  |
 | ystop = 480   | ystop = 600   | ystop = 700   |
