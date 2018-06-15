@@ -1,7 +1,7 @@
 # Behaviorial Cloning Project
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-<img src="examples/image01.png" width="480" alt="Example" />
+<img src="examples/video.gif" width="480" alt="Example" />
 
 Overview
 ---
