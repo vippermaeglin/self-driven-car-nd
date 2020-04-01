@@ -9,23 +9,50 @@ Self-driving cars are set to revolutionize the way we live. This is transformati
 
 * <a href="https://github.com/vippermaeglin/self-driven-car-nd/tree/master/P1%20-%20Lane%20Lines"> Finding Lane Lines on the Road</a>:
 In this project I detect lane lines in images using Python and OpenCV. OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.
+
+## Stacks & Frameworks ##
+* OpenCV (Grayscale, Gaussian Blur, Canny Detector, Hough Transformation, Renderization)
+
 <img src="P1 - Lane Lines/examples/laneLines_thirdPass.jpg" width="480" alt="Example Image" align="middle"/>
 
 * <a href="https://github.com/vippermaeglin/self-driven-car-nd/tree/master/P2%20-%20Traffic%20Sign%20Classifier"> Traffic Sign Classifier</a>:
 In this project, I use what I've learned about deep neural networks and convolutional neural networks to classify traffic signs. Specifically, I trained a model to classify traffic signs from the German Traffic Sign Dataset.
+
+## Stacks & Frameworks ##
+* OpenCV (Grayscale)
+* Scikit Learn (Train & Test Split)
+* TensorFlow (Convolutional Neural Network - LeNet)
+
 <img src="P2 - Traffic Sign Classifier/examples/image13.png" width="480" alt="Example Image" align="middle"/>
 
 * <a href="https://github.com/vippermaeglin/self-driven-car-nd/tree/master/P3%20-%20Behavioral%20Clonning"> Behavioral Clonning</a>:
 In this project, I use the Udacity Simulator to generate a car driving data and train a Convolutional Neural Network model to clone my driving behavior.
+
+## Stacks & Frameworks ##
+* OpenCV (Grayscale)
+* Scikit Learn (Train & Test Split)
+* Keras (CNN Models, Layers & Optimizers)
+
 <img src="P3 - Behavioral Clonning/examples/image01.png" width="480" alt="Example Image" align="middle"/>
 <img src="P3 - Behavioral Clonning/examples/video.gif" width="480" alt="Example Video" align="middle"/>
 
 * <a href="https://github.com/vippermaeglin/self-driven-car-nd/tree/master/P4%20-%20Advanced%20Lane%20Finding"> Advanced Lane Finding</a>:
 In this project, I wrote a software pipeline to identify the lane boundaries in a video from a front-facing camera on a car. The camera calibration images, test road images, and project videos are available in the project repository.
+
+## Stacks & Frameworks ##
+* OpenCV (Gradient, Perspective, Channel Transformations)
+* MoviePy (Video Edition)
+
 <img src="P4 - Advanced Lane Finding/examples/image01.png" width="480" alt="Example Image" align="middle"/>
 
 * <a href="https://github.com/vippermaeglin/self-driven-car-nd/tree/master/P5%20-%20Vehicle%20Detection"> Vehicle Detection & Tracking</a>:
 In this project, I wrote a software pipeline to identify vehicles in a video from a front-facing camera on a car. The test images and project video are available in the project repository. 
+
+## Stacks & Frameworks ##
+* OpenCV (Gradient, Perspective, Channel Transformations)
+* Scikit Learn (Support Vector Machine)
+* MoviePy (Video Edition)
+
 <img src="P5 - Vehicle Detection/examples/video.gif" width="480" alt="Example Video" align="middle"/>
 
 ### Partners ###
